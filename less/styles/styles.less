@@ -1,0 +1,44 @@
+@import 'components/header.less';
+@import 'components/products.less';
+@import 'components/reset.less';
+
+@corPrincipal: #182C61;
+@corSecundaria: #44bd32;
+@container-width: 1024px;
+@font-padrão: 'Roboto', sans-serif;
+
+
+body {
+    background-color: @corPrincipal;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: @container-width;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1023px) {
+    .container {
+        max-width: 80%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .products {
+        display: block;
+    }
+
+    .product-item  {
+        margin-bottom: 32px;
+    }
+}
